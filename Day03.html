@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        #logo{
+            width: 400px;
+            height: 400px;
+            margin:auto;
+            display:block; 
+        }
+        .title{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <!-- <img 
+                        id="logo" 
+                        v-bind:src="src"
+                    > -->
+                    <img 
+                        id="logo" 
+                        :src="src"
+                    >
+                    <!-- <h1 v-text="title"></h1>
+                    <h1 v-html="title"></h1> -->
+                    <h1>{{title}}</h1>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        let data={
+            src:'./images/745965.jpg',
+            title:'Vue.js 手牽手，一起嗑光全家桶'
+        }
+
+        let vm=new Vue({
+            el:'#app',
+            data:data
+        })
+    </script>
+</body>
+
+</html>
