@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        body { 
+            background-color: #04c956;
+        }
+        .input{
+            width: 800px;
+            height: 100px;
+            background-color: #164878;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 20px;
+            margin-left: 250px;
+            margin-top: 150px;
+        }
+        .input-A{
+            width: 750px;
+            height: 80px;
+            background-color: #FFFFFF;
+            display:flex;
+            border-radius: 5px 5px 5px 5px;
+
+        }
+        .select{
+            margin-top: 18px;
+            margin-left: 30px;
+            margin-right: 15px;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+        .select2{
+            font-size: 20px;
+            height: 50px;
+            margin-top: 18px;
+            width: 500px;
+        }
+        .number{
+            background-color: #164878;
+            padding: 5px;
+            color: #FFFFFF;
+            border-radius: 5px;
+        }
+        
+        .title{
+            background-color: #FFFFFF;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .menuItem-white{
+            margin-left: 600px;
+            margin-top: 60px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div>
+                    <div 
+                       class="input"
+                       style="font-size:0px;"
+                    >
+                        <div class="input-A">
+                            <select class="select" v-model="input.type">
+                                <option :value="null">請選擇</option>
+                                <option v-for="item in Typelist.sort">{{item}}</option>
+                            </select>
+                            <select class="select2" v-model="input.title">
+                                <option :value="null">請選擇</option>
+                                <option v-for="item2 in titleList.sort">{{item2}}</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="descripition">
+                        <div    
+                            v-if="content"
+                            class="menuItem-white"
+                            style="transition:scale3d(1.5,1.5,1)"
+                        >
+                            <span class="number">{{content.index +1}}</span>
+                            <a
+                                class="title"
+                                :href="content.link"
+                            >{{content.link}}
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+        </section>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <script src="day08.js"></script>
+</body>
+
+</html>
