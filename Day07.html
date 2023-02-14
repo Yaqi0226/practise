@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        body { 
+            background-color: #04c956;
+        }
+        .input{
+            width: 1000px;
+            height: 100px;
+            background-color: #164878;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 20px;
+            margin-left: 150px;
+            margin-top: 40px;
+        }
+        .input-A{
+            width: 950px;
+            height: 80px;
+            background-color: #FFFFFF;
+            display:flex;
+            border-radius: 5px 5px 5px 5px;
+           
+            
+        }
+        .select{
+            margin-top: 18px;
+            margin-left: 30px;
+            margin-right: 15px;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+        .text{
+            margin-top: 17px;
+            width: 700px;
+            height: 45px;
+            outline: none
+        }
+        .menu{
+            width: 1000px;
+            height: 400px;
+            background-color: #FFFFFF;
+            display:flex;
+            font-size: 18px;
+            flex-wrap: wrap;
+            margin-left: 150px;
+        }
+        .menuItem{
+            width: 430px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .menuItem2{
+            width: 400px;
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+        .number{
+            border-radius: 50%;
+            background-color: #164878;
+            padding: 5px;
+            color: #FFFFFF;
+        }
+        .type{
+            background-color: #f7b320;
+            padding: 6px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <div 
+                       class="input"
+                       style="font-size:0px;"
+                    >
+                        <div class="input-A">
+                            <select class="select" v-model="input.type">
+                                <option>全部</option>
+                                <option>主廚的話</option>
+                                <option>餐具擺盤</option>
+                                <option>開胃餐點</option>
+                                <option>風味沙拉</option>
+                                <option>總匯拼盤</option>
+                                <option>主廚推薦</option>
+                            </select>
+                            &nbsp;
+                            <input type="text" class="text" v-model.trim="input.title">
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="menuItem" v-for="(item,index) in titleMenu">
+                            <span class="number">{{index +1}}</span>&nbsp;&nbsp;
+                            <span class="type">{{item.type}}</span>&nbsp;&nbsp;
+                            <a
+                               :href="item.link"
+                               class="title"
+                            >{{item.title}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <script src="day07.js"></script>
+</body>
+
+</html>
