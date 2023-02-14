@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        body { 
+            background-color: #04c956;
+        }
+        .input{
+            width: 1000px;
+            height: 100px;
+            background-color: #164878;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 20px;
+            margin-left: 150px;
+            margin-top: 40px;
+        }
+        .input-A{
+            width: 950px;
+            height: 80px;
+            background-color: #FFFFFF;
+            display:flex;
+            border-radius: 5px 5px 5px 5px;
+           
+            
+        }
+        .select{
+            margin-top: 18px;
+            margin-left: 30px;
+            margin-right: 15px;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+        .text{
+            margin-top: 17px;
+            width: 700px;
+            height: 45px;
+            outline: none
+        }
+        .menu{
+            width: 1000px;
+            height: 400px;
+            background-color: #FFFFFF;
+            display:flex;
+            font-size: 18px;
+            flex-wrap: wrap;
+            margin-left: 150px;
+        }
+        .menuItem{
+            width: 430px;
+            margin-top: 30px;
+            margin-left: 30px;
+        }
+        .menuItem2{
+            width: 400px;
+            margin-left: 80px;
+            margin-top: 30px;
+        }
+        .number{
+            border-radius: 50%;
+            background-color: #164878;
+            padding: 5px;
+            color: #FFFFFF;
+        }
+        .type{
+            background-color: #f7b320;
+            padding: 6px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <div 
+                       class="input"
+                       style="font-size:0px;"
+                    >
+                        <div class="input-A">
+                            <select class="select">
+                                <option>主廚的話</option>
+                                <option>餐具擺盤</option>
+                                <option>開胃餐點</option>
+                                <option>風味沙拉</option>
+                                <option>總匯拼盤</option>
+                                <option>主廚推薦</option>
+                            </select>
+                            &nbsp;
+                            <input type="text" class="text">
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <div class="menuItem"><span class="number">01</span>&nbsp;&nbsp;<span class="type">主廚的話</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >餐點簡介與相關說明</a>
+                        </div>
+                        <div class="menuItem2"><span class="number">02</span>&nbsp;&nbsp;<span class="type">餐具擺盤</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >萬用白瓷 VS Code 與套裝工具組</a>
+                        </div>
+                        <div class="menuItem"><span class="number">03</span>&nbsp;&nbsp;<span class="type">開胃餐點</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >中式資料綁定佐無毒 jQuery 畫面處理</a>
+                        </div>
+                        <div class="menuItem2"><span class="number">04</span>&nbsp;&nbsp;<span class="type">開胃餐點</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >古早味事件燉畫面綁定</a>
+                        </div>
+                        <div class="menuItem"><span class="number">05</span>&nbsp;&nbsp;<span class="type">開胃餐點</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >清爽表單處理佐雙向資料</a>
+                        </div>
+                        <div class="menuItem2"><span class="number">06</span>&nbsp;&nbsp;<span class="type">風味沙拉</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >天然 CSS 過場佐 jQuery 動畫</a>
+                        </div>
+                        <div class="menuItem"><span class="number">07</span>&nbsp;&nbsp;<span class="type">風味沙拉</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >異國風情資料觀測與設定</a>
+                        </div>
+                        <div class="menuItem2"><span class="number">08</span>&nbsp;&nbsp;<span class="type">總匯拼盤</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >家鄉通訊錄佐手作 API</a>
+                        </div>
+                        <div class="menuItem"><span class="number">09</span>&nbsp;&nbsp;<span class="type">主廚推薦</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >科學單檔模組化料理</a>
+                        </div>
+                        <div class="menuItem2"><span class="number">10</span>&nbsp;&nbsp;<span class="type">主廚推薦</span>&nbsp;&nbsp;
+                            <a
+                               href="javascript:;"
+                               class="title"
+                            >清燉嫩煮百頁路由</a>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <script>
+        let data={
+            menu:[
+                {'type':'主廚的話','title':'餐點簡介與相關說明','day':'01'},
+                {'type':'餐具擺盤','title':'萬用白瓷 VS Code 與套裝工具組','day':'02'},
+                {'type':'開胃餐點','title':'中式資料綁定佐無毒 jQuery 畫面處理','day':'03'},
+                {'type':'開胃餐點','title':'古早味事件燉畫面綁定','day':'04'},
+                {'type':'開胃餐點','title':'清爽表單處理佐雙向資料','day':'05'},
+                {'type':'風味沙拉','title':'天然 CSS 過場佐 jQuery 動畫','day':'06'},
+                {'type':'風味沙拉','title':'異國風情資料觀測與設定','day':'07'},
+                {'type':'總匯拼盤','title':'家鄉通訊錄佐手作 API','day':'08'},
+                {'type':'主廚推薦','title':'科學單檔模組化料理','day':'09'},
+                {'type':'主廚推薦','title':'清燉嫩煮百頁路由','day':'10'},
+            ]
+        }
+    </script>
+</body>
+
+</html>

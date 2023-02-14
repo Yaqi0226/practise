@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta 
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <title>DAY5範例</title>
+    <style>
+        body { 
+            background-color: #04c956;
+        }
+        .input{
+            width: 800px;
+            height: 80px;
+            font-size: 28px;
+            text-align: center;
+            margin-left: 300px;
+            margin-top: 150px;
+            margin-bottom: 20px;
+            background-color: #164878;
+            border-radius: 5px 5px 5px 5px;
+            color: aliceblue;
+        }
+        .menu{
+            background-color: aliceblue;
+            width: 800px;
+            height: 200px;
+            border-radius: 5px 5px 5px 5px;
+            margin-left:300px;
+        }
+        .table{
+            padding-top: 20px;
+            margin-left: 300px;
+        }
+        .title{
+            font-size: 20px;
+        }
+        .select{
+            width: 150px;
+            height: 30px;
+            font-size: 14px;
+        }
+        .value{
+            width: 150px;
+            height: 25px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <div class="input">Cici，女性，年齡為20-30歲間，<br/>喜歡瑜珈、追劇、睡覺，已成為會員頻道。</div>
+                    <div class="menu">
+                        <table class="table">
+                            <tr>
+                                <td class="title">
+                                    姓名:
+                                </td>
+                                <td>
+                                    <input class="value" value="Cici"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    性別:
+                                </td>
+                                <td>
+                                    <input 
+                                        type="radio"
+                                        value="女"
+                                        checked
+                                    />女
+                                    <input 
+                                        type="radio"
+                                        value="男"
+                                    />男
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    年齡:
+                                </td>
+                                <td>
+                                    <select class="select">
+                                        <option>20歲以下</option>
+                                        <option selected>20歲-30歲間</option>
+                                        <option>30歲-40歲間</option>
+                                        <option>40歲以上</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    興趣:
+                                </td>
+                                <td>
+                                    <input 
+                                        type="checkbox" 
+                                        value="追劇" 
+                                        checked
+                                    />追劇
+                                    <input 
+                                        type="checkbox"
+                                        value="瑜珈"
+                                        checked
+                                    />瑜珈
+                                    <input 
+                                        type="checkbox"
+                                        value="睡覺"
+                                        checked
+                                    />睡覺
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="title">
+                                    會員:
+                                </td>
+                                <td>
+                                    <input 
+                                        type="checkbox" 
+                                        checked
+                                    />加入
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script></script>
+</body>
+</html>

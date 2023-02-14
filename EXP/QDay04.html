@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        #logo{
+            width: 400px;
+            height: 400px;
+            margin:auto;
+            display:block; 
+        }
+        .title{
+            text-align: center;
+        }
+        .left{
+            margin-left: 400px; 
+            float: left; 
+            width: 0; 
+            height: 0; 
+            border-width: 15px; 
+            border-style: solid; 
+            border-radius: 8px;
+            border-color: transparent #1ff053 transparent transparent;
+        }
+        .right{
+            margin-right: 400px; 
+            float: right; 
+            width: 0; 
+            height: 0; 
+            border-width: 15px; 
+            border-style: solid;
+            border-radius: 8px; 
+            border-color: transparent #1ff053 transparent transparent;
+            transform: rotate(180deg);
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <img 
+                        id="logo" 
+                        :src="src"
+                    >
+                    <h1>Vue.js 手牽手，一起嗑光全家桶</h1>
+                    <div class="description">
+                        
+                        <div style="transform:scale3d(1.5,1.5,1)"
+                        >
+                            <a class="left"></a>
+                            <span>4</span>
+                            <span>開胃餐點</span>
+                            <a>古早味事件燉畫面綁定</a>
+                            <a class="right"></a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        let data={
+            title:' Vue.js 手牽手，一起嗑光全家桶 ',
+            src:'./images/745965.jpg',
+            menu:[
+                {'type':'主廚的話','title':'餐點簡介與相關說明','day':'01'},
+                {'type':'餐具擺盤','title':'萬用白瓷 VS Code 與套裝工具組','day':'02'},
+                {'type':'開胃餐點','title':'中式資料綁定佐無毒 jQuery 畫面處理','day':'03'},
+                {'type':'開胃餐點','title':'古早味事件燉畫面綁定','day':'04'},
+                {'type':'開胃餐點','title':'清爽表單處理佐雙向資料','day':'05'},
+                {'type':'風味沙拉','title':'天然 CSS 過場佐 jQuery 動畫','day':'06'},
+                {'type':'風味沙拉','title':'異國風情資料觀測與設定','day':'07'},
+                {'type':'總匯拼盤','title':'家鄉通訊錄佐手作 API','day':'08'},
+                {'type':'主廚推薦','title':'科學單檔模組化料理','day':'09'},
+                {'type':'主廚推薦','title':'清燉嫩煮百頁路由','day':'10'},
+            ]
+        }
+    </script>
+</body>
+
+</html>

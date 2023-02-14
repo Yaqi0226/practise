@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        body{
+            background-color: #00ff73;
+        }
+        #logo{
+            width: 400px;
+            height: 400px;
+            margin:auto;
+            display:block; 
+        }
+        .title{
+            text-align: center;
+        }
+        .left{
+            margin-left: 300px; 
+            float: left; 
+            width: 0; 
+            height: 0; 
+            border-width: 15px; 
+            border-style: solid; 
+            border-radius: 8px;
+            border-color: transparent #000a25 transparent transparent;
+        }
+        .right{
+            margin-right: 300px; 
+            float: right; 
+            width: 0; 
+            height: 0; 
+            border-width: 15px; 
+            border-style: solid;
+            border-radius: 8px; 
+            border-color: transparent #000a25 transparent transparent;
+            transform: rotate(180deg);
+        }
+        .text{
+            margin:0px auto;
+            width:400px;
+            height:0px;
+        }
+        .number{
+            border-radius: 5px;
+            background-color: #115e34;
+            padding: 5px ;
+            color: #FFFFFF;
+        }
+        .type{
+            border-radius: 5px;
+            background-color: #aef872;
+            padding: 5px ;
+        }
+        .ex{
+            border-radius: 5px;
+            background-color: #FFFFFF;
+            padding: 5px ;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div class="title">
+                    <img 
+                        id="logo" 
+                        :src="src"
+                    >
+                    <h1>{{title}}</h1>
+                    <div class="description">
+                        <!-- 如果不是第一天就秀起來 -->
+                        <!-- index !=0 -->
+                        <a 
+                            v-show="index > 0"
+                            class="left"
+                            @click="changeIndex(-1)"
+                        >
+                        </a>
+                        <div 
+                            class="text" 
+                            style="transform:scale3d(1.5,1.5,1)"
+                        >
+                            <span class="number">{{ index+1}}</span>&nbsp;&nbsp;
+                            <span class="type">{{today.type}}</span>&nbsp;&nbsp;
+                            <span class="ex">{{today.title}}</span>
+                        </div>
+                        <!-- 如果不是最後一天就秀起來 -->
+                        <!-- index != total -1 -->  
+                        <a 
+                            v-show="index < total-1"
+                            class="right"
+                            @click="changeIndex(1)"
+                        >
+                        </a>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script>
+        let data={
+            title:' Vue.js 手牽手，一起嗑光全家桶 ',
+            src:'./images/745965.jpg',
+            index:0,
+            menu:[
+                {'type':'主廚的話','title':'餐點簡介與相關說明','day':'01'},
+                {'type':'餐具擺盤','title':'萬用白瓷 VS Code 與套裝工具組','day':'02'},
+                {'type':'開胃餐點','title':'中式資料綁定佐無毒 jQuery 畫面處理','day':'03'},
+                {'type':'開胃餐點','title':'古早味事件燉畫面綁定','day':'04'},
+                {'type':'開胃餐點','title':'清爽表單處理佐雙向資料','day':'05'},
+                {'type':'風味沙拉','title':'天然 CSS 過場佐 jQuery 動畫','day':'06'},
+                {'type':'風味沙拉','title':'異國風情資料觀測與設定','day':'07'},
+                {'type':'總匯拼盤','title':'家鄉通訊錄佐手作 API','day':'08'},
+                {'type':'主廚推薦','title':'科學單檔模組化料理','day':'09'},
+                {'type':'主廚推薦','title':'清燉嫩煮百頁路由','day':'10'},
+            ]
+        }
+
+        let vm = new Vue({
+            el:'#app',
+            data: data,
+            computed:{
+               today(){
+                return this.menu[this.index]
+               },
+               total(){
+                return this.menu.length
+               }    
+            },
+            methods: {
+                //changeIndex:function(){} 
+                changeIndex(change){
+                    // let length =this.menu.length
+                    this.index = (this.index + change + this.total) % this.total
+                    // this.index += change
+                    // if(this.index<0){
+                    //     this.index  = this.menu.length -1
+                    // }else if(this.index>this.menu.length -1){
+                    //     this.index = 0  
+                    // }
+                },
+            }
+        })
+    </script>
+</body>
+
+</html>

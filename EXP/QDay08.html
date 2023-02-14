@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta
+        http-equiv="X-UA-Compatible"
+        content="IE=edge"
+    >
+    <title>DOC</title>
+    <style>
+        body { 
+            background-color: #04c956;
+        }
+        .input{
+            width: 800px;
+            height: 100px;
+            background-color: #164878;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border-radius: 5px 5px 5px 5px;
+            margin-bottom: 20px;
+            margin-left: 250px;
+            margin-top: 150px;
+        }
+        .input-A{
+            width: 750px;
+            height: 80px;
+            background-color: #FFFFFF;
+            display:flex;
+            border-radius: 5px 5px 5px 5px;
+
+        }
+        .select{
+            margin-top: 18px;
+            margin-left: 30px;
+            margin-right: 15px;
+            width: 150px;
+            height: 50px;
+            font-size: 20px;
+        }
+        .select2{
+            font-size: 20px;
+            height: 50px;
+            margin-top: 18px;
+            width: 500px;
+        }
+        .number{
+            background-color: #164878;
+            padding: 5px;
+            color: #FFFFFF;
+            border-radius: 5px;
+        }
+        
+        .title{
+            background-color: #FFFFFF;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .menuItem-white{
+            margin-left: 600px;
+            margin-top: 60px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <section>
+            <div class="container">
+                <div>
+                    <div 
+                       class="input"
+                       style="font-size:0px;"
+                    >
+                        <div class="input-A">
+                            <select class="select">
+                                <option>請選擇</option>
+                                <option selected>主廚的話</option>
+                                <option>餐具擺盤</option>
+                                <option>開胃餐點</option>
+                                <option>風味沙拉</option>
+                                <option>總匯拼盤</option>
+                                <option>主廚推薦</option>
+                            </select>
+                            <select class="select2">
+                                <option>請選擇</option>
+                                <option selected>餐點簡介與相關說明</option>
+                                <option>萬用白瓷 VS Code 與套裝工具組</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="descripition">
+                        <div 
+                            class="menuItem-white"
+                            style="transition:scale3d(1.5,1.5,1)"
+                        >
+                            <span class="number">1</span>
+                            <a
+                                class="title"
+                                href="javascript:;"
+                            >javascript:;
+                            </a>
+                        </div>
+                    </div>  
+                </div>
+        </section>
+    </div>
+    <script src="https://cdn.bootcss.com/vue/2.5.16/vue.js"></script>
+    <script>
+        let data={
+            menu:[
+                {'type':'主廚的話','title':'餐點簡介與相關說明','day':'01'},
+                {'type':'餐具擺盤','title':'萬用白瓷 VS Code 與套裝工具組','day':'02'},
+                {'type':'開胃餐點','title':'中式資料綁定佐無毒 jQuery 畫面處理','day':'03'},
+                {'type':'開胃餐點','title':'古早味事件燉畫面綁定','day':'04'},
+                {'type':'開胃餐點','title':'清爽表單處理佐雙向資料','day':'05'},
+                {'type':'風味沙拉','title':'天然 CSS 過場佐 jQuery 動畫','day':'06'},
+                {'type':'風味沙拉','title':'異國風情資料觀測與設定','day':'07'},
+                {'type':'總匯拼盤','title':'家鄉通訊錄佐手作 API','day':'08'},
+                {'type':'主廚推薦','title':'科學單檔模組化料理','day':'09'},
+                {'type':'主廚推薦','title':'清燉嫩煮百頁路由','day':'10'},
+            ]
+        }
+    </script>
+</body>
+
+</html>
